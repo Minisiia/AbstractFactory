@@ -61,6 +61,6 @@ public class WizardElf implements Wizard {
 
     @Override
     public void callSpecialAbility() {
-        System.out.println("Human are coming! Elf wizards! Get ready! " + name + ability);
+        System.out.println("Humans are coming! Elf wizards! Get ready! " + name + ability);
     }
 }

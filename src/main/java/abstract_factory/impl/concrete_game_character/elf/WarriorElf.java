@@ -61,6 +61,6 @@ public class WarriorElf implements Warrior {
 
     @Override
     public void callSpecialAbility() {
-        System.out.println("Human are coming! Elf warriors! Get ready! " + name + ability);
+        System.out.println("Humans are coming! Elf warriors! Get ready! " + name + ability);
     }
 }

@@ -61,6 +61,6 @@ public class ArcherElf implements Archer {
 
     @Override
     public void callSpecialAbility() {
-        System.out.println("Human are coming! Elf archers! Get ready! " + name + ability);
+        System.out.println("Humans are coming! Elf archers! Get ready! " + name + ability);
     }
 }
