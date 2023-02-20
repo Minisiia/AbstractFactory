@@ -1,5 +1,10 @@
 package abstract_factory;
 
+import abstract_factory.client.Game;
+import abstract_factory.impl.concrete_factory.ElfCharacterFactory;
+import abstract_factory.impl.concrete_factory.HumanCharacterFactory;
+import abstract_factory.interfaces.abs_factory.AbstractFactory;
+
 /**
  * Create a game using the Abstract Factory pattern.
  * The game should have a set of characters, including warriors, mages, and archers.
@@ -10,6 +15,23 @@ package abstract_factory;
  */
 public class Main {
     public static void main(String[] args) {
-
+        AbstractFactory elfFactory = new ElfCharacterFactory();
+        AbstractFactory humanFactory = new HumanCharacterFactory();
+        Game game = new Game(elfFactory);
+        // create elves
+        game.createArcherCharacter("Venti", 20000, 50);
+        game.createWarriorCharacter("Ayaka", 18000, 52);
+        game.createWizardCharacter("Klee", 16000, 49);
+        game.showAllCharacters();
+        // create human
+        game.switchRace(humanFactory);
+        game.createArcherCharacter("Ganyu", 25000, 55);
+        game.createWarriorCharacter("Ayato", 28000, 48);
+        game.createWizardCharacter("Mona", 15000, 55);
+        game.showAllCharacters();
+        // call special abilities
+        game.callCharacterSpecialAbility("Venti");
+        game.callCharacterSpecialAbility("Ayato");
+        game.callCharacterSpecialAbility("Klee");
     }
 }
